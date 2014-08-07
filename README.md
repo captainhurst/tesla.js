@@ -106,6 +106,8 @@ Options:
 + ```--html hogan``` [Hogan.js](http://twitter.github.io/hogan.js/) - uses [hogan-middleware](https://npmjs.org/package/hogan-middleware) npm package
 + ```--html jade``` [Jade](http://jade-lang.com/) (default) - uses [jade](https://npmjs.org/package/jade) npm package
 + ```--html mustache``` [Mustache](http://mustache.github.io/) - uses [mustache-express](https://npmjs.org/package/mustache-express) npm package
+npm package
++ ```--html swig``` [swig](http://paularmstrong.github.io/swig/) - uses [swig](https://www.npmjs.org/package/swig) npm package
 
 Example:
 
