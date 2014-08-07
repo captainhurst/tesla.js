@@ -51,20 +51,6 @@ var exit = require('gulp-exit'),
     var less = require('gulp-less');
   }
 
-  // JADE
-  if ( app.config.engines.html === 'jade' ) {
-    var jade = require('gulp-jade');
-  }
-
-  // SWIG
-
-  if( app.config.engines.html === 'swig'{
-    var swig = require('gulp-swig');
-  });
-
-
-
-
 
 // DEFAULT TASK TO PROECESS CSS, START THE SERVER & WATCH FOR CHANGES
 gulp.task('default', ['nodemon', 'css', 'watch']);
