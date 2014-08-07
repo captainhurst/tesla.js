@@ -22,6 +22,8 @@ var min_css, min_less, min_sass, min_stylus, min_js, cacheDir, htmlEngine, compr
     htmlEngine = require('hogan-middleware');
   } else if ( app.config.engines.html === 'mustache' ) {
     htmlEngine = require('mustache-express');
+  } else if (app.config.engines.html === "swig") {
+    htmlEngine = require('swig');
   } else {
     htmlEngine = require(app.config.engines.html);
   }
@@ -203,6 +205,9 @@ var min_css, min_less, min_sass, min_stylus, min_js, cacheDir, htmlEngine, compr
     } else if ( app.config.engines.html === 'mustache' ) {
       app.engine('mustache', htmlEngine());
       app.set('view engine', 'mustache');
+    } else if ( app.config.engines.html === 'swig'){
+      app.engine('html', swig.renderFile);
+      app.set('view engine', 'html');
     } else {
       app.set('view engine', app.config.engines.html);
     }

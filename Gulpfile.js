@@ -56,6 +56,12 @@ var exit = require('gulp-exit'),
     var jade = require('gulp-jade');
   }
 
+  // SWIG
+
+  if( app.config.engines.html === 'swig'{
+    var swig = require('gulp-swig');
+  });
+
 
 
 
